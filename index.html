@@ -3,7 +3,6 @@
 		<script>
 			var xhr = new XMLHttpRequest();
 			xhr.open("GET", "https://support.wurl.com/hc/api/internal/csrf_token.json", true);
-			xhr.withCredentials = true;
 
 			xhr.onload = function() {
 			  if (xhr.status >= 200 && xhr.status < 300) {
