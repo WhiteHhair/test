@@ -2,8 +2,8 @@
 	<body>
 		<script>
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "https://support.wurl.com/hc/en-us/requests?foo.js", true);
-
+			xhr.open("GET", "https://api.sandbox.getalma.eu/v1/users", true);
+			xhr.withCredentials = true;
 			xhr.onload = function() {
 			  if (xhr.status >= 200 && xhr.status < 300) {
 			    console.log("Response:", xhr.responseText);
